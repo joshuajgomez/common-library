@@ -1,11 +1,11 @@
 # common-library
 Library containing common files useful to all projects
 
-### Usage
+## Usage
 
-In module level gradle file :-
+### In module level gradle file :-
 
-1. Add repository in 'android'
+1. Add repository in **android**
 ~~~
 repositories {
         flatDir {
@@ -22,4 +22,4 @@ implementation(name:'commonlib-debug', ext:'aar')
 ~~~
 -------------------------------
 
-NB:- CommonLibs project should be in the same directory as other projects to be used in them.
+*NB:- **CommonLibs** project should be in the same directory as other projects to be used in them.*
