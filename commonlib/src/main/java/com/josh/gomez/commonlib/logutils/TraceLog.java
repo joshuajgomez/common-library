@@ -4,7 +4,6 @@ import android.util.Log;
 
 public class TraceLog {
 
-    //comment just added now
 
     public static void entryLog() {
         StackTraceElement element = Thread.currentThread().getStackTrace()[3];
