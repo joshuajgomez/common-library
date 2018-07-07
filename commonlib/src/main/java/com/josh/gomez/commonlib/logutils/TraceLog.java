@@ -30,6 +30,22 @@ public class TraceLog {
         Log.i(TAG + className, methodName + " : " + message);
     }
 
+    public static void log(int logPriority, String message) {
+        StackTraceElement element = Thread.currentThread().getStackTrace()[3];
+        String className = element.getClassName();
+        className = className.substring(className.lastIndexOf(".") + 1, className.length());
+        String methodName = element.getMethodName();
+        Log.println(logPriority, TAG + className + methodName, message);
+    }
+
+    public static void log(int logPriority, String tag, String message) {
+        StackTraceElement element = Thread.currentThread().getStackTrace()[3];
+        String className = element.getClassName();
+        className = className.substring(className.lastIndexOf(".") + 1, className.length());
+        String methodName = element.getMethodName();
+        Log.println(logPriority, TAG + className + methodName + " : " + tag, message);
+    }
+
     public static void exceptionLog(Exception e) {
         StackTraceElement element = Thread.currentThread().getStackTrace()[3];
         String className = element.getClassName();
