@@ -11,7 +11,7 @@ public class TraceLog {
         String className = element.getClassName();
         className = className.substring(className.lastIndexOf(".") + 1, className.length());
         String methodName = element.getMethodName();
-        Log.i(TAG + className, methodName + " >>> Entry");
+        Log.i(TAG + className, methodName + " >> Entry");
     }
 
     public static void exitLog() {
@@ -19,7 +19,7 @@ public class TraceLog {
         String className = element.getClassName();
         className = className.substring(className.lastIndexOf(".") + 1, className.length());
         String methodName = element.getMethodName();
-        Log.i(TAG + className, methodName + " <<< Exit");
+        Log.i(TAG + className, methodName + " << Exit");
     }
 
     public static void log(String message) {
